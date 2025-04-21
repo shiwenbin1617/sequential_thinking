@@ -1,7 +1,4 @@
-import json
-import sys
-from typing import Dict, List, Any, Optional, Union
-from dataclasses import dataclass
+from typing import Dict, List, Any, Optional
 from pydantic import BaseModel, Field
 from colorama import init, Fore, Style
 from mcp.server import FastMCP
@@ -11,7 +8,7 @@ import logging
 init()
 
 logger = logging.getLogger(__name__)
-mcp = FastMCP("顺序思考", debug=True)
+mcp = FastMCP("sequential_thinking", debug=True)
 
 
 class ThoughtData(BaseModel):
